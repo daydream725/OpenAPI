@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="v2_custom">
+
+  <insert id="v2_addCustom" parameterType="VO.v2_customVO">
+     INSERT INTO V2_CUSTOM VALUES(#{id}, #{pw}, #{name},#{tel},SYSDATE)
+ </insert>
+  
+<!-- 
+ <select id="IdCheck" parameterType="VO.v2_customVO" resultType="int">
+ 	SELECT count(*) as cnt FROM v2_custom WHERE id=#{id}
+ </select>
+ 
+ <select id="logincustom" parameterType = "VO.v2_customVO" resultType="VO.v2_customVO">
+ 	SELECT * FROM `v2_custom` WHERE id=#{id} AND pw=SHA1(#{pw})
+ </select> -->
+</mapper>
